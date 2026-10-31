@@ -1,0 +1,19 @@
+# VPS: replace this hostname and configure DNS before starting Caddy.
+harness.example.com {
+    # No access log, request-body logging, cache, or auth token in query strings.
+    # Caddy manages public HTTPS. frps exposes only a loopback TCP listener.
+    # PWA login/CSRF/WebAuthn enforcement lives in the upstream Harness.
+    # Keep every path on this same upstream; do not serve /app or private JS
+    # from an unauthenticated file_server. Keep the exact Host/origin intact.
+    @health path /healthz
+    respond @health 404
+    reverse_proxy 127.0.0.1:18765 {
+        flush_interval -1
+    }
+    header {
+        Strict-Transport-Security "max-age=31536000"
+        Cache-Control "no-store"
+        X-Content-Type-Options "nosniff"
+        ?Referrer-Policy "no-referrer"
+    }
+}

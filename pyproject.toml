@@ -1,0 +1,38 @@
+[project]
+name = "local-model-telegram"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "aiohttp>=3.11,<4",
+    "python-dotenv>=1,<2",
+    "python-telegram-bot[socks]>=22,<23",
+    "huggingface-hub>=0.34",
+    "Pillow>=11",
+    "psutil>=7",
+    "ddgs>=9,<10",
+    "beautifulsoup4>=4.13,<5",
+    "webrtcvad-wheels>=2.0.14",
+    "httpx[http2]>=0.28,<1",
+    "PyJWT[crypto]>=2.10,<3",
+    "webauthn==2.7.1",
+    "mcp>=1.28,<2",
+    "jsonschema>=4.23,<5",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=1"]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["local_ai*"]
+
+[tool.setuptools.package-data]
+local_ai = ["pwa/*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+testpaths = ["tests"]

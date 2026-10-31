@@ -1,0 +1,23 @@
+name: iOS checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ios:
+    name: iOS contract checks
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Swift parse, plist lint and contract tests
+        run: ./ios/check.sh

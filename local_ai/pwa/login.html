@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <meta name="apple-mobile-web-app-title" content="Friday">
+  <title>登录 · Friday</title>
+  <link rel="icon" href="/pwa/friday-icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/pwa/friday-apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/pwa/manifest.webmanifest">
+  <link rel="stylesheet" href="/pwa/style.css?v=11">
+  <script type="module" src="/pwa/login.js"></script>
+</head>
+<body class="login-page">
+  <main class="login-card">
+    <header class="login-masthead">
+      <a class="brand" href="/login"><img src="/pwa/friday-icon-192.png" width="24" height="24" alt=""><span>Friday</span></a>
+    </header>
+    <div class="login-intro">
+      <h1 id="auth-title">登录</h1>
+      <p id="auth-intro" class="lead">使用已保存的通行密钥，继续会话与任务。</p>
+    </div>
+    <button id="login" class="primary" type="button">
+      <span>使用已有通行密钥</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
+    </button>
+    <p id="login-hint" class="hint">首次使用，请先创建通行密钥。</p>
+    <p id="login-status" class="notice" role="status" aria-live="polite"></p>
+    <section id="register-panel" class="enrollment" aria-label="首次设置" hidden>
+      <form id="register-form">
+        <label for="invite-code">一次性注册码</label>
+        <input id="invite-code" name="invite-code" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="200" required>
+        <label for="device-label">密钥名称</label>
+        <input id="device-label" name="device-label" type="text" autocomplete="off" placeholder="例如：我的 iPhone" maxlength="100" required>
+        <button class="primary" type="submit">创建通行密钥</button>
+      </form>
+      <p class="hint enrollment-help">注册码由 Mac 生成，10 分钟内有效。开始创建后即失效。</p>
+    </section>
+    <a id="auth-switch" class="auth-switch" href="#setup">首次使用 · 创建通行密钥</a>
+    <p class="privacy-note">通行密钥私钥由系统保管。<br>请只在你信任的设备上登录。</p>
+  </main>
+</body>
+</html>

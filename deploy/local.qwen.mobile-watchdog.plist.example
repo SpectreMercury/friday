@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>Label</key><string>local.qwen.mobile-watchdog</string>
+<key>ProgramArguments</key><array>
+<string>/ABSOLUTE/PATH/qwen/.venv/bin/python</string><string>-m</string><string>local_ai.maintenance</string>
+<string>--database</string><string>/ABSOLUTE/PATH/qwen/runtime/bot.sqlite3</string>
+<string>--local-health</string><string>http://127.0.0.1:8765/healthz</string>
+</array>
+<key>WorkingDirectory</key><string>/ABSOLUTE/PATH/qwen</string>
+<key>RunAtLoad</key><true/><key>KeepAlive</key><true/><key>ThrottleInterval</key><integer>30</integer>
+</dict></plist>

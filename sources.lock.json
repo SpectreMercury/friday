@@ -1,0 +1,11 @@
+{
+  "llama_cpp": "b11173",
+  "repositories": {
+    "vendor/ComfyUI": "78368eafee727c52efd121b775e0783c195e5c94",
+    "vendor/h3-mac": "cf952858e97ff67e9ee8635b303b6c746f930384",
+    "vendor/ComfyUI/custom_nodes/ComfyUI-GGUF": "edd981b10e107d3b8f58e16c498f2d08f631bc47",
+    "vendor/ComfyUI/custom_nodes/comfyui-obvpm": "704fe3edea3e69f113219319c87bdf4c74abc5cd",
+    "vendor/ComfyUI/custom_nodes/ComfyUI-AppleSilicon-FP8": "9c78935963e885ba93313807974dc64d71058c7f",
+    "vendor/ComfyUI/custom_nodes/ComfyUI-PlagueKind-Nodes": "aaec055cd642b3292df18e69824c012d345ebfe8"
+  }
+}

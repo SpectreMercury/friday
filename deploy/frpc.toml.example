@@ -1,0 +1,17 @@
+# Mac: serverName must match the VPS certificate SAN. Both peers verify the CA.
+serverAddr = "harness.example.com"
+serverPort = 7000
+auth.method = "token"
+auth.token = "REPLACE_WITH_SAME_RANDOM_TUNNEL_TOKEN"
+transport.tls.enable = true
+transport.tls.serverName = "harness.example.com"
+transport.tls.certFile = "/ABSOLUTE/PATH/pki/client.crt"
+transport.tls.keyFile = "/ABSOLUTE/PATH/pki/client.key"
+transport.tls.trustedCaFile = "/ABSOLUTE/PATH/pki/ca.crt"
+
+[[proxies]]
+name = "harness-mobile"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 8765
+remotePort = 18765

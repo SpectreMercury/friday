@@ -1,0 +1,18 @@
+[
+  {
+    "name": "api_geocode",
+    "description": "按地名查询经纬度和国家/行政区。Open-Meteo 地理编码 API；选城市前核对同名地区。",
+    "url": "https://geocoding-api.open-meteo.com/v1/search",
+    "properties": {"name":{"type":"string","maxLength":100},"language":{"type":"string","enum":["zh","en"]}},
+    "required": ["name"],
+    "defaults": {"count":5,"format":"json","language":"zh"}
+  },
+  {
+    "name": "api_weather",
+    "description": "以核实的经纬度获取当前及今日天气、单位与本地日期。先核对城市和时间，不使用历史文章代替今天。",
+    "url": "https://api.open-meteo.com/v1/forecast",
+    "properties": {"latitude":{"type":"number","minimum":-90,"maximum":90},"longitude":{"type":"number","minimum":-180,"maximum":180}},
+    "required": ["latitude","longitude"],
+    "defaults": {"current":"temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m","daily":"temperature_2m_max,temperature_2m_min,precipitation_probability_max","timezone":"auto","forecast_days":1}
+  }
+]

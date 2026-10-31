@@ -1,0 +1,15 @@
+# Friday Logo 新方向
+
+两版均使用内置 imagegen 生成，作为设计对比稿；尚未替换当前应用图标。
+
+- friday-armored.png：参考钢铁侠面甲的硬朗比例，黑白眼睛和嘴巴。
+- friday-companion.png：参考大白的简洁、亲和气质，圆润眼睛和短横嘴巴。
+
+## 硬朗版提示词
+
+Create a sophisticated minimal black and white robot face logo for Friday. The aesthetic reference is Iron Man's faceplate: stoic, handsome, heroic, intelligent, powerful, sleek industrial design. Reduce that faceplate expression to ONLY TWO WHITE EYES AND ONE WHITE MOUTH floating on pure black. No actual helmet outline or face silhouette, no nose, no head, no eyebrows. Essential: handsome composed proportions instead of an angry cartoon. Eyes are two symmetrical clean narrow luminous-white graphic apertures, mostly horizontal, long restrained chamfered hexagons, with very slight inner downward tilt, NOT angry triangles, NOT thick eyebrows, NOT swoosh shapes. Mouth sits far below the eyes, a single restrained white shallow angular mouth aperture, like the composed mouth slit on Iron Man's mask, geometric, symmetrical, no smirk. All three elements feel designed together from a futuristic armored faceplate. Generous vertical eye-to-mouth space: eye center y=37%, mouth center y=66%, empty black space between at least 20% canvas height. Eye span overall x=23% to 77%, mouth width 22% of canvas. Shape thickness bold enough for a small app icon, beautifully balanced negative space. White shapes on opaque solid pure black background. Flat 2D vector-like precise graphic. No slit decorations inside the eyes, no racing stripes, no disconnected fragments, no circuits, no text, no gradients, no glow, no rendering or texture, no mockup. One single finished square logo. Aim for an iconic expensive product identity rather than a gaming clan badge.
+
+## 圆润版提示词
+
+Design one exceptionally minimal, beautiful black-and-white robot face logo for Friday, a personal AI companion. Aesthetic inspiration: Baymax's unforgettable simplicity and quiet warmth, blended with the sophisticated industrial design of a premium home robot. ONLY two eyes and a tiny mouth. Pure white flat shapes on solid pure black square canvas. Two identical upright softly rounded pill eyes with very refined proportions, spaced widely apart, calmly attentive, no anger. Each eye approximately 7 percent canvas width and 13 percent height, centered x=35% and x=65%, y=39%. One simple short horizontal softly rounded white mouth slot, width 14% of canvas and height 3%, centered x=50%, y=65%. Large clear vertical breathing space between eyes and mouth. The composition must feel like a quiet intelligent robot display, composed and charming, memorable enough to be an app identity. The eye curves and mouth curves are optically harmonious. No head outline, face boundary, antenna, nose, cheeks, eyebrows, connecting line between eyes, sparkle, decoration, teeth, smile curve, text or lettering. Flat precise 2D vector-like graphic with perfect pure white geometry and black negative space. No gradient, glow, texture, shadow, perspective, 3D or mockup. One square finished icon only, centered design with generous margins.
+

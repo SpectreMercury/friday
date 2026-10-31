@@ -1,0 +1,11 @@
+# VPS. Firewall: public 80/443 TCP for Caddy, 7000/TCP for frp; never expose 18765.
+bindAddr = "0.0.0.0"
+bindPort = 7000
+proxyBindAddr = "127.0.0.1"
+auth.method = "token"
+auth.token = "REPLACE_WITH_RANDOM_TUNNEL_TOKEN"
+transport.tls.force = true
+transport.tls.certFile = "/etc/frp/pki/server.crt"
+transport.tls.keyFile = "/etc/frp/pki/server.key"
+transport.tls.trustedCaFile = "/etc/frp/pki/ca.crt"
+allowPorts = [{ single = 18765 }]

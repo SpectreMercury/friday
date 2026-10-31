@@ -1,0 +1,32 @@
+name: Node tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: node-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  node:
+    name: Node tests (PWA + Pi bridge)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22.19"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Install Pi dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+        working-directory: pi
+      - name: node --test
+        run: node --test tests/*.test.mjs pi/*.test.mjs

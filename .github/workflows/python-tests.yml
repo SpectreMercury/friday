@@ -1,0 +1,35 @@
+name: Python tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: python-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    name: Python unit tests
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22.19"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Install Python dependencies
+        run: uv sync --frozen --python 3.12
+      # Agent tests drive the real Pi runner through vendor/node.
+      - name: Install Pi Agent
+        run: .venv/bin/python scripts/setup_pi.py --node "$(command -v node)" --pnpm "$(command -v pnpm)"
+      - name: pytest
+        run: .venv/bin/python -m pytest -q

@@ -1,0 +1,83 @@
+[
+  {
+    "key": "chat",
+    "repo": "vcruz305/Qwen3.8-27B-AEON-ULTIMATE-UNCENSORED-GGUF",
+    "revision": "b1b47502a84d9f92226fdcf7ef14556436e889ba",
+    "filename": "Qwen3.8-27B-AEON-ULTIMATE-UNCENSORED-Q4_K_M.gguf",
+    "path": "models/chat/Qwen3.8-27B-AEON-ULTIMATE-UNCENSORED-Q4_K_M.gguf",
+    "size": 16810715168,
+    "sha256": "d4396fed4df6c4994cf5ee0177c47180a60a58b734ad5470ac7ac88b12f1ddb7"
+  },
+  {
+    "key": "image",
+    "repo": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+    "revision": "40319fb15542f0ad22921e0124a191a8a935a60a",
+    "filename": "qwen-image-2.1-UC-Q8_0.gguf",
+    "path": "vendor/ComfyUI/models/diffusion_models/qwen-image-2.1-UC-Q8_0.gguf",
+    "size": 7591557920,
+    "sha256": "cde456c72ea3ecebfc1be783300e972711d875e0c5f1bed33d42b66b156affa8"
+  },
+  {
+    "key": "image_encoder",
+    "repo": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+    "revision": "40319fb15542f0ad22921e0124a191a8a935a60a",
+    "filename": "text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+    "path": "vendor/ComfyUI/models/text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+    "size": 9350798360,
+    "sha256": "8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f"
+  },
+  {
+    "key": "image_vae",
+    "repo": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+    "revision": "40319fb15542f0ad22921e0124a191a8a935a60a",
+    "filename": "vae/qwen_image_2.1_vae_bf16.safetensors",
+    "path": "vendor/ComfyUI/models/vae/qwen_image_2.1_vae_bf16.safetensors",
+    "size": 675509688,
+    "sha256": "bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9"
+  },
+  {
+    "key": "video",
+    "repo": "Abiray/MiniMax-H3-Pruned-GGUF",
+    "revision": "76061e7fe4866dbc68903bfdf852430f0f1b2487",
+    "filename": "MiniMax-H3-FL2VA-Pruned-Q5_K_M.gguf",
+    "path": "vendor/ComfyUI/models/diffusion_models/MiniMax-H3-FL2VA-Pruned-Q5_K_M.gguf",
+    "size": 14068966496,
+    "sha256": "abe739ac98bc14d6e4e56987198765b02899da632ad254c820f559b6dc4d1171"
+  },
+  {
+    "key": "video_encoder",
+    "repo": "pottokao/MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-GGUF",
+    "revision": "823f5ab888c52d5413c00518c70f5955dcbccb83",
+    "filename": "MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-Q3_K_S_vis.gguf",
+    "path": "vendor/ComfyUI/models/text_encoders/MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-Q3_K_S_vis.gguf",
+    "size": 12646554528,
+    "sha256": "74b04cd89568fe4e74f371ebec3c52bbe16ffe25a9f3ba0c50687db556e6151d"
+  },
+  {
+    "key": "video_lora",
+    "repo": "Plaguekind/H3-Lora",
+    "revision": "96ba2db062416a8ff7c867d27a575550d932e2e8",
+    "filename": "H3-PK-Parasyte-Turbo.safetensors",
+    "path": "vendor/ComfyUI/models/loras/H3-PK-Parasyte-Turbo.safetensors",
+    "size": 2115774558,
+    "sha256": "dbf74bfb490b9322bd455edff95ce222b3553bb3472e4743134755db1edfe044"
+  },
+  {
+    "key": "video_vae",
+    "repo": "Comfy-Org/MiniMax-H3",
+    "revision": "bf92c4091e333e69b8ca1998e0a669f15cb0832b",
+    "filename": "vae/minimax_h3_video_vae_fp16.safetensors",
+    "path": "vendor/ComfyUI/models/vae/minimax_h3_video_vae_fp16.safetensors",
+    "size": 5207808496,
+    "sha256": "7c1f131492e7eddacaac9069a61b81bdd39de5cc96561e677c5eab1cdce5e522"
+  },
+  {
+    "key": "audio_vae",
+    "repo": "Comfy-Org/MiniMax-H3",
+    "revision": "bf92c4091e333e69b8ca1998e0a669f15cb0832b",
+    "filename": "vae/minimax_h3_audio_vae_fp32.safetensors",
+    "path": "vendor/ComfyUI/models/vae/minimax_h3_audio_vae_fp32.safetensors",
+    "size": 605254808,
+    "sha256": "8e505d95dd1561d47abd43d4238fd40d9bb1ae9e147ed0a4cba778d76ae4db48"
+  }
+]

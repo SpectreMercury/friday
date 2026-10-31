@@ -1,0 +1,214 @@
+{
+  "source_job_id": "f9cd81175bc7",
+  "source_schema_version": 5,
+  "contract": {
+    "schema_version": 5,
+    "deliverables": [
+      {
+        "description": "使用 calculate 工具计算 4.6 - 4.3 的结果",
+        "evidence": "effect_receipt",
+        "proof_kind": "operation",
+        "source_job_ids": [
+          "f9cd81175bc7"
+        ],
+        "requirement_id": "requirement:f9cd81175bc7:a6d2145fb1e1a3ec"
+      },
+      {
+        "description": "判断 4.3 < 4.6 - 0.3 是否成立",
+        "evidence": "reasoning",
+        "proof_kind": "reasoning",
+        "source_job_ids": [
+          "f9cd81175bc7"
+        ],
+        "requirement_id": "requirement:f9cd81175bc7:02e5d6a91b927e32"
+      },
+      {
+        "description": "直接回答计算与判断结果",
+        "evidence": "reasoning",
+        "proof_kind": "reasoning",
+        "source_job_ids": [
+          "f9cd81175bc7"
+        ],
+        "requirement_id": "requirement:f9cd81175bc7:7de7c05037692502"
+      }
+    ],
+    "prerequisites": [],
+    "known_missing_inputs": [],
+    "current_input_ids": [
+      "f9cd81175bc7"
+    ],
+    "source_coverage": {
+      "f9cd81175bc7": true
+    }
+  },
+  "operations": [
+    {
+      "name": "calculate",
+      "call_id": "t2c28EwP2BX4FstPEF660469Zqovqr6d",
+      "arguments": {
+        "expression": "4.6 - 4.3"
+      },
+      "result": {
+        "expression": "4.6 - 4.3",
+        "note": "数字来自调用参数；计算结果不能证明来源数据真实。",
+        "value": "0.3"
+      },
+      "status": "succeeded",
+      "effect": "read"
+    },
+    {
+      "name": "calculate",
+      "call_id": "G2EaWP24KXHWjnRXqgBLiRPPHujML3TD",
+      "arguments": {
+        "expression": "4.3 < 4.6 - 0.3"
+      },
+      "result": {
+        "expression": "4.3 < 4.6 - 0.3",
+        "note": "数字来自调用参数；计算结果不能证明来源数据真实。",
+        "value": false
+      },
+      "status": "succeeded",
+      "effect": "read"
+    }
+  ],
+  "original_normalized_review": {
+    "request_coverage": [
+      {
+        "source_job_id": "f9cd81175bc7",
+        "goals": [
+          {
+            "description": "使用 calculate 工具计算 4.6 - 4.3",
+            "proof_kind": "operation",
+            "contract_requirement_ids": [
+              "requirement:f9cd81175bc7:a6d2145fb1e1a3ec"
+            ],
+            "missing_user_inputs": []
+          },
+          {
+            "description": "判断 4.3 < 4.6 - 0.3 是否成立",
+            "proof_kind": "operation",
+            "contract_requirement_ids": [
+              "requirement:f9cd81175bc7:02e5d6a91b927e32"
+            ],
+            "missing_user_inputs": []
+          },
+          {
+            "description": "直接回答计算与判断结果",
+            "proof_kind": "reasoning",
+            "contract_requirement_ids": [
+              "requirement:f9cd81175bc7:7de7c05037692502"
+            ],
+            "missing_user_inputs": []
+          }
+        ]
+      }
+    ],
+    "math_claims": [
+      {
+        "expression": "4.6 - 4.3",
+        "claimed_value": "0.3",
+        "round_digits": null
+      },
+      {
+        "expression": "4.6 - 0.3",
+        "claimed_value": "4.3",
+        "round_digits": null
+      },
+      {
+        "expression": "4.3 < 4.3",
+        "claimed_value": "false",
+        "round_digits": null
+      }
+    ],
+    "checks": [
+      {
+        "requirement_id": "requirement:f9cd81175bc7:a6d2145fb1e1a3ec",
+        "state": "missing",
+        "evidence_refs": [
+          "operation:f9cd81175bc7:t2c28EwP2BX4FstPEF660469Zqovqr6d"
+        ],
+        "evidence": "calculate 工具被调用，参数 expression 为 4.6 - 4.3，返回 value 0.3，满足使用 calculate 工具计算 4.6 - 4.3 的要求。",
+        "requirement": "使用 calculate 工具计算 4.6 - 4.3 的结果",
+        "satisfied": false
+      },
+      {
+        "requirement_id": "requirement:f9cd81175bc7:02e5d6a91b927e32",
+        "state": "satisfied",
+        "evidence_refs": [
+          "operation:f9cd81175bc7:G2EaWP24KXHWjnRXqgBLiRPPHujML3TD"
+        ],
+        "evidence": "calculate 工具被调用，参数 expression 为 4.3 < 4.6 - 0.3，返回 value false，满足判断 4.3 < 4.6 - 0.3 是否成立的要求。",
+        "requirement": "判断 4.3 < 4.6 - 0.3 是否成立",
+        "satisfied": true
+      },
+      {
+        "requirement_id": "requirement:f9cd81175bc7:7de7c05037692502",
+        "state": "satisfied",
+        "evidence_refs": [
+          "input:f9cd81175bc7"
+        ],
+        "evidence": "候选回复直接给出 4.6 - 4.3 = 0.3 以及 4.3 < 4.6 - 0.3 不成立的结论，满足直接回答计算与判断结果的要求。",
+        "requirement": "直接回答计算与判断结果",
+        "satisfied": true
+      }
+    ],
+    "accepted": false,
+    "outcome": "partial",
+    "resolved_missing_inputs": [],
+    "missing_user_inputs": [],
+    "repair": true,
+    "feedback": "原始请求仍有合同未覆盖的目标：[{\"description\": \"判断 4.3 < 4.6 - 0.3 是否成立\", \"proof_kind\": \"operation\", \"contract_requirement_ids\": [\"requirement:f9cd81175bc7:02e5d6a91b927e32\"], \"missing_user_inputs\": [], \"source_job_id\": \"f9cd81175bc7\", \"reason\": \"proof_kind_mismatch\"}]。解释缺口不代表这些目标完成；只处理仍被授权的当前目标。逐项证据不足：requirement:f9cd81175bc7:a6d2145fb1e1a3ec lacks operation evidence。只修复这些当前要求，不能重做无关历史动作。所有要求均已满足，无需补充。",
+    "model_outcome": "completed",
+    "contract_gaps": [
+      {
+        "description": "判断 4.3 < 4.6 - 0.3 是否成立",
+        "proof_kind": "operation",
+        "contract_requirement_ids": [
+          "requirement:f9cd81175bc7:02e5d6a91b927e32"
+        ],
+        "missing_user_inputs": [],
+        "source_job_id": "f9cd81175bc7",
+        "reason": "proof_kind_mismatch"
+      }
+    ],
+    "completion_watch": [],
+    "completion_watch_only": false,
+    "evidence": {
+      "checks": [
+        {
+          "requirement_id": "requirement:f9cd81175bc7:a6d2145fb1e1a3ec",
+          "state": "missing",
+          "evidence_refs": [
+            "operation:f9cd81175bc7:t2c28EwP2BX4FstPEF660469Zqovqr6d"
+          ],
+          "evidence": "calculate 工具被调用，参数 expression 为 4.6 - 4.3，返回 value 0.3，满足使用 calculate 工具计算 4.6 - 4.3 的要求。",
+          "requirement": "使用 calculate 工具计算 4.6 - 4.3 的结果",
+          "satisfied": false
+        },
+        {
+          "requirement_id": "requirement:f9cd81175bc7:02e5d6a91b927e32",
+          "state": "satisfied",
+          "evidence_refs": [
+            "operation:f9cd81175bc7:G2EaWP24KXHWjnRXqgBLiRPPHujML3TD"
+          ],
+          "evidence": "calculate 工具被调用，参数 expression 为 4.3 < 4.6 - 0.3，返回 value false，满足判断 4.3 < 4.6 - 0.3 是否成立的要求。",
+          "requirement": "判断 4.3 < 4.6 - 0.3 是否成立",
+          "satisfied": true
+        },
+        {
+          "requirement_id": "requirement:f9cd81175bc7:7de7c05037692502",
+          "state": "satisfied",
+          "evidence_refs": [
+            "input:f9cd81175bc7"
+          ],
+          "evidence": "候选回复直接给出 4.6 - 4.3 = 0.3 以及 4.3 < 4.6 - 0.3 不成立的结论，满足直接回答计算与判断结果的要求。",
+          "requirement": "直接回答计算与判断结果",
+          "satisfied": true
+        }
+      ],
+      "math_errors": []
+    },
+    "answer": "- **4.6 - 4.3 = 0.3**\n- **4.3 < 4.6 - 0.3**：4.6 - 0.3 = 4.3，所以 4.3 < 4.3 **不成立**（两者相等）。"
+  },
+  "reconstruction_note": "The source DB stored the host-normalized verdict, not the raw model JSON. Regression restores check state=satisfied from its persisted semantic conclusions and model_outcome=completed; citations and math claims are unchanged. The original normalized failure is retained here and the acceptance report/DB remain unchanged."
+}
